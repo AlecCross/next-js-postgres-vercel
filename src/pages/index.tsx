@@ -1,7 +1,10 @@
 import React from 'react'
+import ShowList from '../components/ShowList'
 
 export default function index() {
     return (
-        <div>index</div>
+        <div>
+            <ShowList />               
+        </div>
     )
 }
