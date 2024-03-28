@@ -1,0 +1,28 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model categories {
+  category_id   Int    @id @default(autoincrement())
+  category_name String @db.VarChar(100)
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model goods {
+  product_id    Int
+  category_name String @db.VarChar(100)
+
+  @@ignore
+}
+
+model my_test_table {
+  email    String
+  password String
+  username String
+  id       BigInt @id
+}
