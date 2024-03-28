@@ -1,16 +1,3 @@
 {
-    "version": 2,
-    "builds": [
-        {
-            "src": "api/**/*.js",
-            "use": "@vercel/node"
-        },
-        {
-            "src": "package.json",
-            "use": "@vercel/node",
-            "config": {
-                "command": "npm run generate && npm run build"
-            }
-        }
-    ]
+    "version": 2
 }
